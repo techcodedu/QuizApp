@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="results-container text-center">
+    <h2>Game Over, {{ player_name }}!</h2>
+    <p>Your final score is: {{ score }} out of 10</p>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Play Again</a>
+</div>
+{% endblock %}

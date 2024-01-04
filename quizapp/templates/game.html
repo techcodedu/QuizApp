@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h2>Score: {{ session['score'] }}</h2>
+        </div>
+        <div class="col-12 mb-3">
+            <img src="{{ url_for('static', filename=question['image_url']) }}" alt="Random Image" class="img-fluid">
+        </div>
+        <div class="col-12">
+            <form action="{{ url_for('answer') }}" method="post" class="d-grid gap-2">
+                <div class="choices">
+                    {% for choice in question['choices'] %}
+                        <button type="submit" name="choice" value="{{ choice.id }}" class="btn btn-primary">{{ choice.name }}</button>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
