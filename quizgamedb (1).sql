@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2024 at 01:51 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Feb 07, 2024 at 08:45 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -65,9 +65,9 @@ CREATE TABLE `highscore` (
 --
 
 INSERT INTO `highscore` (`id`, `player_id`, `score`, `time`) VALUES
-(1, 1, 4, NULL),
-(2, 2, 1, 9),
-(3, 3, 0, 6);
+(6, 6, 1, 37),
+(7, 7, 1, 7),
+(8, 8, 2, 213);
 
 -- --------------------------------------------------------
 
@@ -91,7 +91,12 @@ CREATE TABLE `player` (
 INSERT INTO `player` (`id`, `name`, `start_time`, `end_time`, `score`, `duration_of_play`) VALUES
 (1, 'adf', '2024-01-04 00:19:06', '2024-01-04 00:19:14', 4, 8),
 (2, 'john', '2024-01-04 00:21:55', '2024-01-04 00:22:03', 1, 9),
-(3, 'john', '2024-01-04 00:45:56', '2024-01-04 00:46:01', 0, 6);
+(3, 'john', '2024-01-04 00:45:56', '2024-01-04 00:46:01', 0, 6),
+(4, 'CHESTER', '2024-01-04 03:06:54', '2024-01-04 03:07:02', 2, 8),
+(5, 'CHESTER', '2024-01-04 03:07:40', '2024-01-04 03:08:34', 4, 54),
+(6, 'Jeof', '2024-01-13 06:12:08', '2024-01-13 06:12:45', 1, 37),
+(7, 'debbie', '2024-01-13 06:12:59', '2024-01-13 06:13:06', 1, 7),
+(8, 'adf', '2024-02-07 07:08:13', '2024-02-07 07:11:46', 2, 213);
 
 -- --------------------------------------------------------
 
@@ -174,13 +179,13 @@ ALTER TABLE `fruits`
 -- AUTO_INCREMENT for table `highscore`
 --
 ALTER TABLE `highscore`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `player`
 --
 ALTER TABLE `player`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `question`
